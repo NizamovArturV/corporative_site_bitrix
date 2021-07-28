@@ -1,0 +1,12 @@
+
+/upload
+*.DS_Store
+sites/s1/bitrix
+/bitrix
+bitrix/backup/
+bitrix/cache/
+bitrix/managed_cache/
+bitrix/tmp
+
+upload
+.DS_Store
