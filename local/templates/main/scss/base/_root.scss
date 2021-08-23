@@ -1,0 +1,159 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: rem(28px);
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: rgba(26, 22, 33, 1);
+}
+
+input {
+    color: black;
+    background-color: #fff;
+    font: inherit;
+    border-width: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+}
+
+
+#transition_disabled *{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(26, 22, 33, 1);
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+h2 {
+    margin: 0;
+    font-size: rem(36px);
+    line-height: rem(44px);
+    font-weight: bold;
+
+    @include tablet_small {
+        font-size: rem(22px);
+        line-height: rem(28px);
+    }
+}
+
+h3 {
+    margin: 0;
+    font-size: rem(22px);
+    line-height: rem(28px);
+    font-weight: bold;
+
+    @include tablet_small {
+        font-size: rem(18px);
+        line-height: rem(24px);
+    }
+}
+
+h4 {
+    margin: 0;
+    font-size: rem(20px);
+    line-height: rem(26px);
+    font-weight: bold;
+
+    @include tablet_small {
+        font-size: rem(16px);
+        line-height: rem(24px);
+    }
+}
+
+.title {
+    font-size: rem(44px);
+    line-height: rem(56px);
+    font-weight: bold;
+
+    @include tablet_small {
+        font-size: rem(32px);
+        line-height: rem(46px);
+    }
+
+    @include mobile {
+        font-size: rem(24px);
+        line-height: rem(32px);
+    }
+}
+
+.container {
+    max-width: rem(1212px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @include min_desktop_extra_small {
+        @include desktop_small {
+            max-width: rem(1140px);
+        }
+    }
+
+    @include min_tablet {
+        @include desktop_extra_small {
+            max-width: rem(1024px);
+        }
+    }
+
+    @include min_tablet_small {
+        @include tablet {
+            max-width: rem(992px);
+        }
+    }
+
+    @include min_mobile {
+        @include tablet_small {
+            max-width: rem(768px);
+        }
+    }
+
+    @include min_mobile_middle {
+        @include mobile {
+            max-width: rem(575px);
+        }
+    }
+
+    @include min_mobile_small {
+        @include mobile_middle {
+            max-width: rem(475px);
+        }
+    }
+    @include mobile_small {
+        max-width: rem(320px);
+    }
+}

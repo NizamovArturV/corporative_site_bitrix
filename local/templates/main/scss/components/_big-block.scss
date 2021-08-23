@@ -1,0 +1,101 @@
+.big-block {
+   display: flex;
+
+   @include tablet {
+      flex-direction: column;
+   }
+
+   &__wrap {
+   }
+
+   &__title {
+      padding-bottom: rem(32px);
+      font-size: rem(44px);
+      line-height: rem(56px);
+
+      @include tablet {
+         padding-bottom: rem(16px);
+         font-size: rem(32px);
+         line-height: rem(44px);
+      }
+
+      @include mobile {
+         font-size: rem(24px);
+         line-height: rem(32px);
+      }
+   }
+
+   &__content {
+      padding: rem(32px);
+      background: #fff;
+      box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+      border-radius: 16px;
+      width: 100%;
+
+      @include tablet {
+         padding: rem(16px);
+      }
+   }
+
+   &__selector {
+      margin: 0 rem(-8px) rem(32px);
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      @include tablet {
+         overflow-x: scroll;
+         display: none;
+      }
+
+      li {
+         padding: 0 rem(8px);
+      }
+
+      &-item {
+         padding: rem(12px) rem(16px);
+         display: block;
+         font-size: rem(16px);
+         line-height: rem(20px);
+         font-weight: bold;
+
+         border: 1px solid rgba(26, 22, 33, 0.2);
+         box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+         border-radius: 6px;
+
+         @include mobile {
+            padding: rem(10px) rem(14px);
+            font-size: rem(14px);
+            line-height: rem(16px);
+         }
+
+         &.active {
+            background: rgba(91, 23, 208, 1);
+            color: #fff;
+         }
+      }
+
+      &.selector-mobile {
+         @include min_tablet {
+            display: none;
+         }
+
+         @include tablet {
+            margin-bottom: rem(28px);
+            display: flex;
+         }
+      }
+   }
+
+   &__sidebar {
+      margin-top: rem(-44px);
+      margin-left: rem(24px);
+      flex: 0 0 rem(276px);
+
+      @include tablet {
+         margin: 0;
+         padding-top: rem(56px);
+      }
+   }
+}

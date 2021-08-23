@@ -1,0 +1,53 @@
+.error {
+   padding: rem(179px) 0 rem(156px);
+   background: rgba(244, 243, 245, 1);
+
+   @include tablet_small {
+      padding: rem(77px) 0 rem(80px);
+   }
+
+   @include mobile {
+      padding: rem(44px) 0 rem(64px);
+   }
+
+   &__btn {
+      margin-top: rem(36px);
+   }
+
+   .first-block {
+      align-items: center;
+
+      &__text {
+         max-width: 40%;
+
+         @include tablet_small {
+            max-width: 100%;
+         }
+
+         p {
+            font-size: rem(18px);
+            line-height: rem(28px);
+
+            @include mobile {
+               font-size: rem(16px);
+               line-height: rem(24px);
+            }
+         }
+      }
+
+      &__title {
+         max-width: 70%;
+
+         @include desktop_small {
+            max-width: 70%;
+         }
+
+         @include tablet {
+            max-width: 100%;
+         }
+      }
+
+      &__image {
+      }
+   }
+}

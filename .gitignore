@@ -2,6 +2,7 @@
 /upload
 *.DS_Store
 sites/s1/bitrix
+sites/s1/local
 /bitrix
 bitrix/backup/
 bitrix/cache/

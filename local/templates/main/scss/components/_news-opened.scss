@@ -1,0 +1,209 @@
+.news-opened {
+   padding: rem(127px) 0 0;
+   background: rgba(244, 243, 245, 1);
+
+   @include tablet {
+      padding: rem(122px) 0 0;
+   }
+
+   @include mobile {
+      padding: rem(77px) 0 0;
+   }
+
+   &__image {
+      max-width: 100%;
+      height: rem(501px);
+      border-radius: rem(10px);
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include desktop_small {
+         height: rem(360px);
+      }
+      @include mobile {
+         height: rem(177px);
+      }
+
+      img {
+         -o-object-fit: contain;
+         object-fit: contain;
+         -o-object-position: center;
+         object-position: center;
+         width: 100%;
+      }
+   }
+
+   &__video {
+      margin-top: rem(16px);
+      max-width: 100%;
+      position: relative;
+      height: rem(501px);
+      border-radius: rem(10px);
+      overflow: hidden;
+
+      @include desktop_extra_small {
+         height: rem(450px);
+      }
+
+      @include mobile {
+         height: rem(277px);
+      }
+      @include mobile {
+         height: rem(207px);
+      }
+
+      @include mobile_small {
+         height: rem(177px);
+      }
+
+      video {
+         width: 100%;
+         border-radius: rem(10px);
+      }
+
+      iframe {
+         height: 100%;
+      }
+
+      &-btn {
+         width: rem(80px);
+         height: rem(80px);
+         border-radius: 50%;
+         background-color: #fff;
+         position: absolute;
+         z-index: 150;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -55%);
+
+         &.hide {
+            z-index: -1;
+         }
+
+         svg {
+            position: absolute;
+            top: 50%;
+            left: 60%;
+            transform: translate(-60%, -50%);
+         }
+      }
+   }
+
+   &__text-wrap {
+      padding-top: rem(40px);
+
+      &>p {
+         padding-top: rem(24px);
+         font-size: rem(18px);
+         line-height: rem(28px);
+
+         @include tablet_small {
+            font-size: rem(16px);
+            line-height: rem(24px);
+         }
+
+         &:first-child {
+            padding-top: 0;
+         }
+      }
+
+      ul {
+         padding-left: rem(18px);
+         list-style: none;
+
+         li {
+            padding-top: rem(12px);
+            position: relative;
+
+            a {
+               text-decoration: underline;
+            }
+         }
+
+         li::before {
+            content: "";
+            width: rem(6px);
+            height: rem(6px);
+            border-radius: 50%;
+            background-color: #5b17d0;
+            position: absolute;
+            top: rem(20px);
+            left: rem(-18px);
+         }
+      }
+   }
+
+   &__table-wrap {
+      padding-top: rem(16px);
+
+      @include tablet {
+         overflow-x: scroll;
+      }
+
+      table {
+         border-collapse: collapse;
+         width: 100%;
+         font-size: 16px;
+         line-height: 18px;
+      }
+
+      tr {
+         &:first-child {
+            text-transform: uppercase;
+            font-size: rem(14px);
+            line-height: rem(20px);
+            letter-spacing: 0.025em;
+            opacity: 40%;
+
+            td {
+               padding-bottom: rem(12px);
+               padding-top: 0;
+            }
+         }
+      }
+
+      td {
+         padding: rem(20px) 0 rem(20px);
+         border-bottom: 1px solid rgba(26, 22, 33, 0.12);
+
+         &:first-child {
+            width: 58%;
+            padding-right: rem(48px);
+
+            @include mobile {
+               padding-right: rem(16px);
+            }
+         }
+
+         &:nth-child(2) {
+            padding-right: rem(16px);
+         }
+      }
+   }
+
+   &__date {
+      padding: rem(32px) 0 rem(12px);
+      opacity: 50%;
+
+      @include mobile {
+         padding: rem(16px) 0 rem(8px);
+         font-size: rem(13px);
+         line-height: rem(16px);
+      }
+   }
+
+   &__title {
+      padding: 0 0 rem(32px);
+      max-width: rem(876px);
+   }
+
+   .big-block__content {
+      @include tablet_small {
+         padding: 0;
+         background: rgba(244, 243, 245, 1);
+         box-shadow: none;
+      }
+   }
+}

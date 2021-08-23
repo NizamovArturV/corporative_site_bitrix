@@ -1,0 +1,53 @@
+.breadcrumbs {
+   ul {
+      padding: 0;
+      display: flex;
+      list-style: none;
+
+      font-size: rem(14px);
+      line-height: rem(20px);
+
+      @include tablet {
+         display: none;
+      }
+
+      li {
+         white-space: nowrap;
+      }
+
+      li::after {
+         content: "/";
+         margin: 0 rem(8px);
+      }
+      li:last-child::after {
+         content: "";
+         margin: 0;
+      }
+
+      p {
+         opacity: 50%;
+      }
+   }
+
+   &__this-page {
+      white-space: normal;
+   }
+
+   &__mobile {
+      display: none;
+      font-size: rem(px);
+
+      p {
+         margin-left: rem(4px);
+      }
+
+      @include tablet {
+         display: flex;
+      }
+
+      @include mobile {
+         font-size: rem(12px);
+         line-height: rem(16px);
+      }
+   }
+}

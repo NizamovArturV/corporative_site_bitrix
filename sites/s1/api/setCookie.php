@@ -1,0 +1,1 @@
+<?php    $result['status'] = 'error';    if (isset($_POST['agree']) && $_POST['agree'] !== '') {    setcookie('agree','Y', time() + (3600 * 24 * 30), '/');    $_COOKIE['agree'] = 'Y';    $result['status'] = 'success';}    echo json_encode($result);

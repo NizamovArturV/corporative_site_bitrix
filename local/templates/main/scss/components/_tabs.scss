@@ -1,0 +1,42 @@
+.tabs {
+   &__caption {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+
+      @include min_tablet {
+         display: none;
+      }
+
+      li {
+         margin-right: rem(8px);
+         padding: rem(10px) rem(14px);
+         border: 1px solid rgba(26, 22, 33, 0.2);
+         border-radius: 6px;
+         font-size: rem(14px);
+         line-height: rem(16px);
+         font-weight: bold;
+         cursor: pointer;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         &.active {
+            background: rgba(91, 23, 208, 1);
+            color: #ffffff;
+         }
+      }
+   }
+
+   &__content {
+      @include tablet {
+         display: none;
+
+         &.active {
+            display: block;
+         }
+      }
+   }
+}

@@ -1,0 +1,64 @@
+.sidebar {
+   &__wrap {
+      padding-bottom: rem(28px);
+
+      @include tablet {
+         padding-bottom: rem(56px);
+      }
+
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+
+   &__title {
+      padding-bottom: rem(16px);
+   }
+
+   &__block {
+      padding: rem(20px) rem(24px) rem(24px);
+      background: #ffffff;
+      box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+      border-radius: 8px;
+
+      &-description {
+         display: flex;
+         flex-direction: column;
+
+         @include tablet_small {
+            flex-direction: row;
+            
+            p:last-child {
+               margin-left: rem(5px);
+            }
+         }
+      }
+   }
+
+   &__row {
+      padding: rem(20px) 0;
+      display: block;
+      border-bottom: 1px solid rgba(26, 22, 33, 0.12);
+
+      &:first-child {
+         padding-top: 0;
+      }
+
+      &:last-child {
+         padding-bottom: 0;
+         border-bottom: none;
+      }
+
+      p {
+         font-size: rem(13px);
+         line-height: rem(16px);
+         opacity: 60%;
+      }
+   }
+
+   &__subtitle {
+      margin-bottom: rem(8px);
+      font-size: rem(16px);
+      line-height: rem(20px);
+   }
+}

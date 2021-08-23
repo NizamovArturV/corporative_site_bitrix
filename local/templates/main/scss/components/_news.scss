@@ -1,0 +1,105 @@
+.news {
+   padding: rem(163px) 0 rem(140px);
+   background: #f4f3f5;
+
+   @include tablet {
+      padding: rem(115px) 0 rem(80px);
+   }
+
+   @include mobile {
+      padding: rem(82px) 0 rem(64px);
+   }
+
+   &__row {
+      padding: rem(28px) 0;
+      border-bottom: 1px solid rgba(26, 22, 33, 0.12);
+      display: flex;
+      align-items: center;
+
+      @include tablet_small {
+         padding: rem(20px) 0;
+         flex-direction: column;
+      }
+
+      @include tablet {
+         &:first-child {
+            padding-top: 0;
+            border-top: none !important;
+         }
+
+         &:last-child {
+            padding-bottom: 0;
+            border-bottom: none !important;
+         }
+      }
+
+      &:first-child {
+         border-top: 1px solid rgba(26, 22, 33, 0.12);
+      }
+
+      &:hover {
+         .news__title {
+            color: #5b17d0;
+         }
+      }
+   }
+
+   &__image {
+      max-width: rem(272px);
+      width: 100%;
+      height: rem(168px);
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include tablet {
+         height: rem(158px);
+      }
+      
+      @include tablet_small {
+         margin-bottom: rem(16px);
+      }
+
+      img {
+         object-position: center;
+         object-fit: contain;
+         width: 100%;
+      }
+   }
+
+   &__text {
+      padding-left: rem(28px);
+      max-width: rem(517px);
+
+      @include tablet_small {
+         padding-left: 0;
+      }
+
+      p {
+         font-size: rem(16px);
+         line-height: rem(22px);
+         opacity: 60%;
+
+         @include tablet_small {
+            font-size: rem(14px);
+            line-height: rem(20px);
+         }
+      }
+   }
+
+   &__date {
+      font-size: rem(14px);
+      line-height: rem(20px);
+      opacity: 50%;
+
+      @include mobile {
+         font-size: rem(13px);
+         line-height: rem(16px);
+      }
+   }
+
+   &__title {
+      margin: rem(8px) 0;
+   }
+}

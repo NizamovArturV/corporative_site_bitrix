@@ -1,0 +1,247 @@
+.contacts {
+   &__title {
+   }
+
+   &__block {
+      padding: rem(28px) rem(32px) rem(32px);
+      background: #ffffff;
+      box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+      border-radius: 16px;
+
+      @include tablet_small {
+         padding: rem(16px) rem(16px) rem(20px);
+      }
+   }
+
+   &__block-title {
+      font-size: rem(22px);
+      line-height: rem(28px);
+      font-weight: bold;
+
+      @include tablet_small {
+         font-size: rem(18px);
+         line-height: rem(24px);
+      }
+   }
+
+   &__block-input {
+      margin-top: rem(16px);
+      position: relative;
+      border: 1px solid rgba(26, 22, 33, 0.2);
+      box-sizing: border-box;
+      border-radius: 4px;
+      overflow: hidden;
+
+      input {
+         padding: rem(10px) rem(40px);
+         width: 100%;
+         border: none;
+         font-size: rem(14px);
+         line-height: rem(20px);
+
+         @include tablet_small {
+            font-size: rem(13px);
+            line-height: rem(16px);
+         }
+
+         &:focus + label {
+            display: none;
+         }
+      }
+
+      label {
+         position: absolute;
+         top: 50%;
+         left: rem(40px);
+         transform: translateY(-50%);
+
+         font-size: rem(14px);
+         line-height: rem(20px);
+         opacity: 40%;
+
+         @include tablet_small {
+            font-size: rem(13px);
+            line-height: rem(16px);
+         }
+      }
+
+      &.change {
+         label {
+            display: none;
+         }
+      }
+   }
+
+   &__search-icon {
+      position: absolute;
+      top: 50%;
+      left: rem(14px);
+      transform: translateY(-35%);
+   }
+
+   &__tabs {
+      @include tablet {
+         margin-top: rem(16px);
+      }
+   }
+}
+
+.contacts-top {
+   margin-top: rem(32px);
+
+   @include tablet_small {
+      margin-top: rem(16px);
+   }
+
+   &__text {
+      margin-top: rem(12px);
+      font-size: rem(16px);
+      line-height: rem(24px);
+
+      @include tablet_small {
+         margin-top: rem(4px);
+      }
+
+      p {
+         margin-top: rem(4px);
+
+         &:first-child {
+            margin-top: 0;
+         }
+
+         strong {
+            @include tablet {
+               font-size: rem(14px);
+               line-height: rem(20px);
+            }
+         }
+      }
+   }
+}
+.contacts-bottom {
+   margin-top: rem(24px);
+
+   @include tablet {
+      margin-top: rem(12px);
+   }
+}
+.contacts-subdivisions {
+   margin-top: rem(24px);
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+
+   @include tablet {
+      margin: rem(16px) rem(-32px) 0;
+      flex-direction: column;
+   }
+   @include tablet_small {
+      margin: rem(16px) rem(-16px) 0;
+      flex-direction: column;
+   }
+}
+.contacts-subdivisions-left {
+   margin-right: rem(32px);
+   padding-right: rem(32px);
+   overflow-y: scroll;
+   max-height: rem(530px);
+   flex-grow: 1;
+
+   @include tablet {
+      margin-right: 0;
+      padding: 0 rem(32px);
+      max-height: 100%;
+      overflow: none;
+   }
+   
+   @include tablet_small {
+      padding: 0 rem(16px);
+   }
+
+   &__title {
+      font-size: rem(18px);
+      line-height: rem(24px);
+      font-weight: bold;
+
+      @include tablet_small {
+         font-size: rem(16px);
+         line-height: rem(24px);
+      }
+   }
+
+   &__text {
+      margin-top: rem(6px);
+      font-size: rem(14px);
+      line-height: rem(20px);
+      opacity: 80%;
+
+      @include tablet_small {
+         font-size: rem(13px);
+         line-height: rem(18px);
+      }
+
+      p {
+         margin-top: rem(2px);
+
+         @include tablet_small {
+            margin-top: rem(4px);
+         }
+
+         &:first-child {
+            margin-top: 0;
+         }
+      }
+   }
+}
+.subdivisions {
+   &__row {
+      padding: rem(16px) 0 rem(20px);
+      border-top: 1px solid rgba(26, 22, 33, 0.12);
+      cursor: pointer;
+
+      &:hover .contacts-subdivisions-left__title {
+         color: rgba(91, 23, 208, 1);
+      }
+
+      &.active {
+         color: rgba(91, 23, 208, 1);
+      }
+
+      &:first-child {
+         padding-top: 0;
+         border-top: none;
+
+         @include tablet {
+            padding: rem(16px) 0 rem(20px);
+            border-top: 1px solid rgba(26, 22, 33, 0.12);
+         }
+      }
+
+      &:last-child {
+         padding-bottom: 0;
+      }
+   }
+}
+.contacts-subdivisions-map {
+   margin: 0 auto;
+   max-width: rem(644px);
+   height: rem(533px);
+   width: 100%;
+   border-radius: 16px;
+   overflow: hidden;
+
+   @include tablet {
+      max-width: 100%;
+      border-radius: 0;
+   }
+   @include tablet_small {
+      height: rem(455px);
+   }
+
+   @include mobile {
+      height: rem(302px);
+   }
+
+   img {
+   }
+}

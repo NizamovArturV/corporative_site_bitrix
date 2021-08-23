@@ -1,0 +1,93 @@
+.articles {
+    padding: rem(140px) 0 rem(140px);
+
+    @include tablet {
+        padding: rem(56px) 0 rem(64px);
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        padding-bottom: rem(24px);
+        font-size: rem(22px);
+        line-height: rem(28px);
+        font-weight: bold;
+
+        &_hidden {
+            opacity: 0;
+
+            @include tablet {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.articles-body {
+    margin: 0 rem(-12px);
+    padding-bottom: rem(48px);
+    display: flex;
+
+    @include mobile {
+        padding: 0;
+        flex-direction: column;
+    }
+}
+
+.article {
+    padding: 0 rem(12px);
+    max-width: calc(100% / 3);
+    width: 100%;
+
+    &:hover .article__description {
+        color: rgba(91, 23, 208, 1);
+        transition: 0.2s ease-in-out;
+    }
+
+    @include tablet {
+        padding-bottom: rem(28px);
+        max-width: 100%;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: rem(232px);
+        border-radius: 12px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include mobile_middle {
+            height: rem(178px);
+        }
+    }
+
+    &__date {
+        padding: rem(20px) 0 rem(8px);
+        font-size: rem(14px);
+        line-height: rem(20px);
+        color: #1a1621;
+        opacity: 50%;
+
+        @include mobile {
+            padding: rem(16px) 0 rem(4px);
+            font-size: rem(13px);
+            line-height: rem(16px);
+        }
+    }
+
+    &__description {
+        font-size: rem(18px);
+        font-weight: bold;
+        line-height: rem(24px);
+
+        @include mobile {
+            font-size: rem(16px);
+        }
+    }
+}

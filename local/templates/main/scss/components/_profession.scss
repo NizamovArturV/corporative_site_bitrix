@@ -1,0 +1,13 @@
+.profession .first-block__row-wrapper {
+   // margin-top: rem(122px);
+   position: absolute;
+   bottom: 0;
+
+   @include tablet {
+      margin-top: rem(80px);
+      position: relative;
+   }
+   @include mobile {
+      margin-top: rem(40px);
+   }
+}

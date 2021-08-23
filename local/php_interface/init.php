@@ -1,0 +1,1 @@
+<?php    include_once dirname(__FILE__) . '/wptt/settings.class.php';    include_once dirname(__FILE__) . '/wptt/counter.class.php';    include_once dirname(__FILE__) . '/wptt/main.class.php';

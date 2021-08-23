@@ -1,0 +1,290 @@
+.question-form {
+    padding: rem(64px) rem(64px) rem(88px) rem(64px);
+    border-radius: rem(18px);
+    background-color: white;
+
+    @include tablet {
+        padding: rem(30px) rem(30px) rem(42px);
+    }
+
+    @include mobile {
+        padding: rem(20px) rem(20px) rem(24px);
+    }
+
+    &.sent {
+        .question-form__block-right {
+            display: none;
+        }
+
+        .question-form__row {
+            align-items: flex-end;
+
+            @include tablet {
+                align-items: flex-start;
+            }
+        }
+
+        .question-form__block-right-sent-message {
+            padding-bottom: rem(20px);
+            display: block;
+            text-align: center;
+            opacity: 80%;
+            width: 100%;
+
+            @include tablet {
+                margin-top: rem(20px);
+                text-align: left;
+            }
+    
+            @include mobile {
+                font-size: rem(14px);
+                line-height: rem(20px);
+            }
+        }
+    }
+
+    &__wrapper {
+        background: rgba(44, 42, 48, 1);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(20px);
+        right: rem(30px);
+
+        display: block;
+        cursor: pointer;
+
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M13 1L1 13" stroke="%231A1621" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M1 1L13 13" stroke="%231A1621" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+        height: rem(14px);
+        width: rem(14px);
+    }
+
+
+    &__block-left {
+        max-width: calc(100% / 2);
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+    }
+
+    &__block-right {
+        padding-top: rem(24px);
+        max-width: calc(100% / 2);
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        & > .question-form__field-wrap:first-child {
+            max-width: 100%;
+        }
+
+        &-sent-message {
+            display: none;
+        }
+    }
+
+    &__title {
+        padding-bottom: rem(12px);
+        font-size: rem(48px);
+        line-height: rem(60px);
+        font-weight: bold;
+
+        @include tablet_small {
+            font-size: rem(32px);
+            line-height: rem(42px);
+        }
+
+        @include mobile {
+            font-size: rem(22px);
+            line-height: rem(28px);
+        }
+    }
+
+    &__description {
+        opacity: 80%;
+        max-width: 90%;
+
+        @include mobile {
+            font-size: rem(14px);
+            line-height: rem(20px);
+        }
+    }
+
+    input {
+        padding: rem(8px);
+        font-size: rem(18px);
+        line-height: rem(22px);
+        border: none;
+        width: 100%;
+    }
+
+    &__fields {
+        padding-top: rem(48px);
+        display: flex;
+        width: 100%;
+
+        @include mobile {
+            padding: 0;
+            flex-direction: column;
+        }
+
+        & > .question-form__field-wrap:last-child {
+            padding-left: rem(24px);
+
+            @include mobile {
+                padding: 0;
+            }
+        }
+    }
+
+    &__field-wrap {
+        max-width: 50%;
+        width: 100%;
+
+        @include mobile {
+            padding-bottom: rem(24px);
+            max-width: 100%;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        &.warning {
+            .question-form__field-error {
+                display: block;
+            }
+
+            .question-form__field {
+                border-bottom: 1px solid rgba(208, 23, 23, 0.4);
+            }
+        }
+    }
+
+    &__field {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid rgba(26, 22, 33, 0.4);
+
+        & > label {
+            position: absolute;
+            left: rem(5px);
+            top: 0;
+            transition: 0.2s ease-in-out;
+        }
+
+        &-star {
+            color: rgba(91, 23, 208, 1);
+            margin-left: rem(-4px);
+        }
+
+        &-error {
+            padding-top: rem(4px);
+            font-size: rem(13px);
+            line-height: rem(16px);
+            color: rgba(208, 23, 23, 1);
+            display: none;
+        }
+
+        &.change {
+            & > input + label {
+                top: rem(-20px);
+                font-size: rem(14px);
+                line-height: rem(20px);
+                transition: 0.2s ease-in-out;
+            }
+
+            // & > input:not(:focus) + label {
+            //     top: rem(-20px);
+            //     font-size: rem(14px);
+            //     line-height: rem(20px);
+            //     transition: 0.2s ease-in-out;
+            //     background-color: aqua;
+            // }
+        }
+
+        input:focus + label {
+            top: rem(-20px);
+            font-size: rem(14px);
+            line-height: rem(20px);
+            transition: 0.2s ease-in-out;
+        }
+    }
+
+    &__btn {
+        padding: rem(16px) rem(56px);
+
+        &-wrap {
+            padding-top: rem(48px);
+            display: flex;
+
+            @include mobile {
+                flex-direction: column;
+                padding-top: rem(32px);
+            }
+        }
+
+        &-description {
+            padding-left: rem(20px);
+            font-size: rem(13px);
+            line-height: rem(18px);
+            opacity: 60%;
+
+            @include mobile {
+                padding-top: rem(16px);
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__layout {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: center;
+        // transition: 0.2s ease-in-out;
+
+
+        &.active {
+            opacity: 1;
+            z-index: 100;
+            // transition: 0.2s ease-in-out;
+        }
+
+        .question-form {
+            margin: 0 rem(16px);
+            max-width: 1120px;
+            height: fit-content;
+            // margin: auto auto;
+            position: fixed;
+            top: 25%;
+            z-index: 150;
+        }
+    }
+}

@@ -8,6 +8,30 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/mobileapp/jn.php',
     'SORT' => 100,
   ),
+  2 => 
+  array (
+    'CONDITION' => '#^/good-to-know/#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/good-to-know/index.php',
+    'SORT' => 100,
+  ),
+  4 => 
+  array (
+    'CONDITION' => '#^/professions/#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/professions/index.php',
+    'SORT' => 100,
+  ),
+  3 => 
+  array (
+    'CONDITION' => '#^/programs/#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/programs/index.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/rest/#',

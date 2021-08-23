@@ -1,0 +1,94 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+.range-slider {
+   margin-top: rem(19px);
+}
+
+.range-slider__body {
+   margin-top: rem(12px);
+}
+
+.filter__inputs {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.filter__input-wrap {
+   position: relative;
+   display: flex;
+   width: rem(110px);
+   height: rem(32px);
+   font-size: rem(13px);
+   line-height: rem(20px);
+
+   border: 1px solid rgba(26, 22, 33, 0.2);
+   border-radius: 4px;
+   overflow: hidden;
+
+   @include tablet {
+      width: rem(138px);
+   }
+
+   input {
+      padding-left: rem(29px);
+      width: 100%;
+      letter-spacing: rem(-1px);
+   }
+
+   .filter__input-left {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: rem(8px);
+      opacity: 40%;
+   }
+   .filter__input-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: rem(2px);
+      opacity: 40%;
+   }
+}
+
+.noUi-target {
+   background-color: rgba(26, 22, 33, 0.2);
+   border-radius: 3px;
+   border: none;
+   box-shadow: none;
+   height: rem(2px);
+}
+
+.noUi-connect {
+   background: #5b17d0;
+}
+
+.noUi-connects {
+}
+
+.noUi-horizontal .noUi-handle {
+   width: rem(16px);
+   height: rem(16px);
+   right: rem(-8px);
+   top: rem(-7px);
+   border-radius: 50%;
+   background: #5b17d0;
+   border: none;
+   box-shadow: none;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+   display: none;
+}

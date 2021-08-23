@@ -1,0 +1,1 @@
+<?php if ($arResult["isFormNote"] != "Y") {    $arResult["FORM_HEADER"] = preg_replace("#<form#", "<form class='question-form'", $arResult["FORM_HEADER"]);} else {    $arResult["FORM_HEADER"] = preg_replace("#<form#", "<form class='question-form sent'", $arResult["FORM_HEADER"]);}

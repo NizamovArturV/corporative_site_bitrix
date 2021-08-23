@@ -1,0 +1,133 @@
+@import "./base/breakpoints";
+@import "./base/fonts";
+@import "./base/root";
+@import "./helpers/buttons";
+@import "./helpers/forms";
+// @import "./helpers/onepage-scroll";
+@import "./components/header";
+@import "./components/slider";
+@import "./components/second-block";
+@import "./components/directions-professions";
+@import "./components/caption";
+@import "./components/blocks";
+@import "./components/articles";
+@import "./components/footer";
+@import "./components/first-block";
+@import "./components/profession";
+@import "./components/about-program";
+@import "./components/big-block";
+@import "./components/news";
+@import "./components/news-opened";
+@import "./components/sidebar";
+@import "./components/pagination";
+@import "./components/breadcrumbs";
+@import "./components/about-privacy";
+@import "./components/404";
+@import "./components/catalog";
+@import "./components/filter";
+@import "./components/sorting";
+@import "./components/list-program";
+@import "./components/contacts";
+@import "./components/tabs";
+@import "./helpers/range-slider";
+@import "./components/map";
+@import "./components/cookie";
+// @import "./helpers/onepage-scroll";
+
+.kind-program {
+   margin-bottom: rem(16px);
+   display: inline-block;
+   padding: rem(6px) rem(12px);
+   background: rgba(26, 22, 33, 0.07);
+   border-radius: 40px;
+   font-size: rem(13px);
+   line-height: rem(16px);
+
+   @include tablet_small {
+      margin-bottom: rem(10px);
+   }
+}
+.program-download {
+   margin-right: rem(20px); 
+   padding: rem(16px);
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
+   width: fit-content;
+   box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+   border-radius: 8px;
+   cursor: pointer;
+
+   @include mobile {
+      margin-top: rem(28px);
+      margin-right: 0;
+   }
+
+   &__icon {
+   }
+
+   &__text {
+      padding-left: rem(12px);
+   }
+
+   &__title {
+      margin-bottom: rem(4px);
+      font-size: rem(16px);
+      line-height: rem(20px);
+      font-weight: bold;
+   }
+
+   &__subtitle {
+      font-size: rem(13px);
+      line-height: rem(16px);
+      opacity: 60%;
+   }
+}
+
+.js-filter {
+   cursor: pointer;
+}
+
+.wrapper {
+   padding: rem(140px) 0 rem(140px);
+
+   @include tablet {
+      padding: rem(80px) 0 rem(80px);
+   }
+
+   @include mobile {
+      padding: rem(56px) 0 rem(64px);
+   }
+}
+
+.first-wrapper {
+   padding: rem(179px) 0 rem(140px);
+
+   @include tablet {
+      padding: rem(115px) 0 rem(64px);
+   }
+
+   @include mobile {
+      padding: rem(82px) 0 rem(64px);
+   }
+}
+
+.wrapper-grey {
+   background: rgba(244, 243, 245, 1);
+}
+
+.ya_map {
+   font-family: arial;
+   font-size: 12px;
+   color: #454545;
+}
+
+.bgg {
+   background-color: tomato;
+}
+
+.ymaps {
+  width: 100%;
+}

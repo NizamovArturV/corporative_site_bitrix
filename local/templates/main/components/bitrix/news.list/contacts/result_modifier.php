@@ -1,0 +1,1 @@
+<?php foreach ($arResult['ITEMS'] as $arItem) {    if ($arItem['PROPERTIES']['MAIN']['VALUE'] === 'Y') {        $arResult['MAIN_CONTACT'] = $arItem;    }}

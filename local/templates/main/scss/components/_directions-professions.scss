@@ -1,0 +1,50 @@
+.directions-professions {
+    padding: rem(140px) 0 rem(140px);
+    background: rgba(244, 243, 245, 1);
+
+    @include tablet {
+        padding: rem(56px) 0 rem(64px);
+    }
+
+    &__body {
+        margin-bottom: rem(120px);
+
+        @include tablet {
+            margin-bottom: rem(56px);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(12px);
+        font-size: rem(36px);
+        line-height: rem(44px);
+        font-weight: bold;
+
+        @include tablet {
+            font-size: rem(22px);
+            line-height: rem(28px);
+        }
+    }
+
+    &__discription {
+        max-width: 51%;
+
+        @include tablet {
+            max-width: 100%;
+            font-size: rem(16px);
+            line-height: rem(24px);
+        }
+    }
+
+    &__blocks-wrap {
+        padding-top: rem(48px);
+
+        @include tablet {
+            padding-top: rem(24px);
+        }
+    }
+}

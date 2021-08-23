@@ -1,0 +1,103 @@
+.about-privacy {
+   padding: rem(179px) 0 rem(97px);
+   background: rgba(244, 243, 245, 1);
+
+   @include tablet_small {
+      padding: rem(113px) 0 rem(64px);
+   }
+
+   @include mobile {
+      padding: rem(80px) 0 rem(64px);
+   }
+
+   &__title {
+      font-size: rem(44px);
+      line-height: rem(56px);
+      font-weight: bold;
+      max-width: 60%;
+
+      @include desktop_small {
+         max-width: 100%;
+      }
+
+      @include tablet_small {
+         font-size: rem(34px);
+         line-height: rem(46px);
+      }
+
+      @include mobile {
+         font-size: rem(24px);
+         line-height: rem(32px);
+      }
+   }
+
+   &__text {
+      margin-top: rem(24px);
+      font-size: rem(18px);
+      line-height: rem(28px);
+
+      &:first-child {
+         margin-top: 0;
+      }
+
+      @include tablet_small {
+         font-size: rem(16px);
+         line-height: rem(24px);
+      }
+
+      p {
+         padding-bottom: rem(12px);
+
+         @include mobile {
+            padding-bottom: rem(8px);
+         }
+
+         &:first-child {
+            padding-top: rem(12px);
+
+            @include mobile {
+               padding-top: rem(8px);
+            }
+         }
+
+         &:last-child {
+            padding-bottom: 0;
+         }
+      }
+
+      ul {
+         padding-left: rem(18px);
+         list-style: none;
+
+         li {
+            position: relative;
+         }
+
+         li::before {
+            content: "";
+            width: rem(6px);
+            height: rem(6px);
+            border-radius: 50%;
+            background-color: #5b17d0;
+            position: absolute;
+            top: rem(20px);
+            left: rem(-18px);
+         }
+      }
+   }
+}
+
+.about-privacy-body {
+   margin-top: rem(32px);
+   padding: rem(36px) rem(32px);
+   background: #ffffff;
+   box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+   border-radius: 16px;
+   max-width: rem(876px);
+
+   @include tablet_small {
+      padding: 0;
+      background: rgba(244, 243, 245, 1);
+      box-shadow: none;
+   }
+}

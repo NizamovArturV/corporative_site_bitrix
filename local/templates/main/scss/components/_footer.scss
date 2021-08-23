@@ -1,0 +1,174 @@
+footer {
+    padding-top: rem(100px);
+    background: #2c2a30;
+
+    @include tablet {
+        padding-top: rem(80px);
+    }
+
+    @include mobile {
+        padding-top: rem(48px);
+    }
+}
+.footer {
+    padding-top: rem(88px);
+    color: white;
+
+    @include mobile {
+        padding-top: rem(48px);
+    }
+
+    a {
+        color: white;
+    }
+
+    &__top {
+        padding-bottom: rem(32px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        line-height: rem(24px);
+
+        @include mobile {
+            font-size: rem(16px);
+            line-height: rem(20px);
+        }
+    }
+
+    &__bottom {
+        padding: rem(28px) 0 rem(32px);
+        font-size: rem(14px);
+        line-height: rem(20px);
+        opacity: 40%;
+
+        @include tablet {
+            padding: rem(24px) 0 rem(24px);
+        }
+        @include mobile {
+            font-size: rem(12px);
+            line-height: rem(16px);
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablet {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__contacts {
+    
+    &-phone {
+        padding-bottom: rem(8px);
+    }
+}
+
+    &__main {
+        @include tablet {
+            padding-top: rem(20px);
+        }
+    }
+
+    &__links {
+        padding: 0;
+        margin: 0 rem(-12px);
+        list-style: none;
+        display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        li {
+            padding: 0 rem(12px);
+
+            @include tablet {
+                padding-bottom: rem(12px);
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+    }
+
+    &__social {
+        @include tablet {
+            padding-top: rem(28px);
+        }
+    }
+
+    &__icons {
+        margin: 0 rem(-6px);
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-wrap {
+        padding: 0 rem(6px);
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(40px);
+        height: rem(40px);
+        border-radius: rem(8px);
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: 0.2s ease-in-out;
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid #5b17d0;
+            transition: 0.2s ease-in-out;
+
+            svg {
+                fill: #5b17d0;
+            }
+        }
+    }
+
+    &__col {
+        max-width: calc(100% / 3);
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+            padding-bottom: rem(12px);
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &_privacy {
+        display: flex;
+        justify-content: center;
+        line-height: rem(16px);
+        text-decoration: underline;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &_creator {
+        display: flex;
+        justify-content: flex-end;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+}
