@@ -9,6 +9,6 @@ bitrix/backup/
 bitrix/cache/
 bitrix/managed_cache/
 bitrix/tmp
-
+*.xml
 upload
 .DS_Store
