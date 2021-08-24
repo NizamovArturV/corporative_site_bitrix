@@ -3,6 +3,7 @@
 *.DS_Store
 sites/s1/bitrix
 sites/s1/local
+sites/s1/robots.txt
 /bitrix
 bitrix/backup/
 bitrix/cache/
