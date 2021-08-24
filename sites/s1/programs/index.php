@@ -1,5 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Каталог программ");?>
+$APPLICATION->SetPageProperty("description", "Поможем вам найти подходящие программы профессиональной переподготовки или повышения квалификации");
+$APPLICATION->SetPageProperty("keywords", "подобрать программу обучения, найти курс, выбрать вуз, выбрать колледж");
+$APPLICATION->SetPageProperty("title", "Программы обучения");
+$APPLICATION->SetTitle("Каталог программ обучения");?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"programs", 

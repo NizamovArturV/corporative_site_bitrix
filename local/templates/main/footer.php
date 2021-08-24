@@ -124,7 +124,7 @@ use \Wptt\Settings as Settings;?>
             <div class="footer__bottom">
                 <div class="footer__row">
                     <div class="footer__col">
-                        <a <?=$APPLICATION->GetCurPage() !== '/' ? 'href="/"' : '' ?>>© ООО «ПроЗнание», 2021 — Все права защищены</a>
+                        <a <?=$APPLICATION->GetCurPage() !== '/' ? 'href="/"' : '' ?>>© ООО «ПроЗнание», <?=date('Y')?> — Все права защищены</a>
                     </div>
                     <div class="footer__col">
                         <div class="footer_privacy">

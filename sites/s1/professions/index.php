@@ -1,5 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Профессии");?>
+$APPLICATION->SetPageProperty("description", "Обратитесь в Центры сопровождения обучающихся «ПроЗнание» чтобы сменить профессию или повысить свою квалификацию.");
+$APPLICATION->SetPageProperty("keywords", "выбрать профессию, сменить профессию, подобрать профессию");
+$APPLICATION->SetPageProperty("title", "Каталог профессий");
+$APPLICATION->SetTitle("Каталог профессий");?>
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:news",

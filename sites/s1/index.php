@@ -1,6 +1,9 @@
 <?
     require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-    $APPLICATION->SetTitle("Прознание");
+$APPLICATION->SetPageProperty("description", "Основная идея «ПроЗнания» в том, что бы помочь каждому человеку определиться с выбором куда поступить и сопровождать его на протяжении всего периода обучения.");
+$APPLICATION->SetPageProperty("keywords", "ПроЗнание, обучение, выбрать ВУЗ, найти колледж, программа обучения");
+$APPLICATION->SetPageProperty("title", "Центры сопровождения обучающихся «ПроЗнание»");
+    $APPLICATION->SetTitle("Центры сопровождения обучающихся «ПроЗнание»");
 ?>
 
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "slider_main", Array(

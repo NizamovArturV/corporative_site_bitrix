@@ -7,6 +7,7 @@
     <?php $APPLICATION->ShowHead(); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="cmsmagazine" content="189f7bf1ce74ebf1535cc7e1d6cd03eb" />
     <title><?=$APPLICATION->ShowTitle()?></title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/nouislider.min.css">

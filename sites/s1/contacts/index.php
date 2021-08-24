@@ -1,5 +1,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Контакты");?>
+$APPLICATION->SetPageProperty("description", "Находимся все время рядом, что бы быстро решать все возникающие вопросы. Сеть наших центров по всей республике Башкортостан");
+$APPLICATION->SetPageProperty("keywords", "«ПроЗнание» Уфа, «ПроЗнание» Бирск, «ПроЗнание» Гай, «ПроЗнание» Октябрьский, «ПроЗнание» с. Октябрьское, «ПроЗнание» Белорецк, «ПроЗнание» Мелеуз, «ПроЗнание» Салават");
+$APPLICATION->SetPageProperty("title", "Контакты Центров сопровождения обучающихся «ПроЗнание»");
+$APPLICATION->SetTitle("Контакты Центров сопровождения обучающихся «ПроЗнание»");?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "contacts",
