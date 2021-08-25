@@ -27,7 +27,7 @@
         <div class="container">
             <div class="header-body">
                 <a <?=$APPLICATION->GetCurPage() !== '/' ? 'href="/"' : '' ?> class="header__logo">
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/mainpage/logo.svg" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/mainpage/logo.svg" alt="logo">
                 </a>
                 <div class="header__menu-wrap">
                     <?$APPLICATION->IncludeComponent("bitrix:menu", "main", Array(
