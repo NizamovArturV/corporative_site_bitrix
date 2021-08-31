@@ -27,11 +27,20 @@ use \Wptt\Main as Main;
                 <div class="first-block__title">
                     <?=$arResult['NAME']?>
                 </div>
+                <div class="first-block__title">
+                    Javascript-разработчик
+                </div>
                 <div class="first-block__subtitle">
-                   <?/* <?=$arResult['PROPERTIES']['SCHOOL']['ITEM']['CITY']['VALUE']?>, */?>
                     <?=$arResult['PROPERTIES']['SCHOOL']['ITEM']['NAME']?>
                 </div>
+                <strong>Направление: </strong>
+                <p>
+                    <?=$arResult['PROPERTIES']['DIRECTION']['ITEM']['NAME']?>
+                </p>
+                <strong>Описание: </strong>
                 <?=$arResult['PREVIEW_TEXT']?>
+
+
 
                 <div class="first-block__row-buttons">
                     <? if ($arResult['PROPERTIES']['FILE']['REAL_PATH']):?>

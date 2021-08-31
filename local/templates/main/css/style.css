@@ -1851,9 +1851,16 @@ footer {
     max-width: 100%;
   }
 }
+.first-block__text strong {
+  display: block;
+  margin-top: 0.75rem;
+}
+.first-block__text strong:first-child {
+  margin-top: 1.5rem;
+}
 .first-block__text p {
   max-width: 93%;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   opacity: 80%;
@@ -1870,7 +1877,7 @@ footer {
   }
 }
 .first-block__subtitle {
-  padding: 0.75rem 0 0.5rem;
+  padding: 0.5rem 0 0;
   font-size: 1rem;
   line-height: 1.5rem;
   opacity: 60%;
@@ -3037,6 +3044,97 @@ footer {
 }
 .catalog__content-programs {
   margin-top: 1.5rem;
+}
+.catalog__content-search-title {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 992px) {
+  .catalog__content-search-title {
+    display: none;
+  }
+}
+.catalog__content-search {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  border: 1px solid rgba(26, 22, 33, 0.2);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .catalog__content-search {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .catalog__content-search {
+    height: 2.25rem;
+  }
+}
+.catalog__content-search label {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 992px) {
+  .catalog__content-search label {
+    display: block;
+  }
+}
+.catalog__content-search input {
+  height: 100%;
+  width: 100%;
+  padding-left: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media screen and (max-width: 992px) {
+  .catalog__content-search input {
+    padding-left: 2.25rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .catalog__content-search input {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+.catalog__content-search-btn {
+  height: 2.5rem;
+  width: 4rem;
+  background-color: #5b17d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  right: 0;
+  border-width: 0;
+}
+.catalog__content-search-btn:hover {
+  background-color: #905EE7;
+  transition: 0.2s ease-in-out;
+}
+@media screen and (max-width: 992px) {
+  .catalog__content-search-btn {
+    display: none;
+  }
+}
+.catalog__content-search-wrapper {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+@media screen and (max-width: 575px) {
+  .catalog__content-search-wrapper {
+    margin-bottom: 1.125rem;
+  }
 }
 
 .catalog-selector {

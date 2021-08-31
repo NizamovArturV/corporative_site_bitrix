@@ -29,9 +29,18 @@
          max-width: 100%;
       }
 
+      strong {
+         display: block;
+         margin-top: rem(12px);
+
+         &:first-child {
+            margin-top: rem(24px);
+         }
+      }
+
       p {
          max-width: 93%;
-         padding-top: rem(16px);
+         padding-top: rem(8px);
          font-size: rem(16px);
          line-height: rem(24px);
          opacity: 80%;
@@ -50,7 +59,7 @@
    }
 
    &__subtitle {
-      padding: rem(12px) 0 rem(8px);
+      padding: rem(8px) 0 0;
       font-size: rem(16px);
       line-height: rem(24px);
       opacity: 60%;

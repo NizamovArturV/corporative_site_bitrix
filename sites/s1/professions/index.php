@@ -60,7 +60,8 @@ $APPLICATION->SetTitle("Каталог профессий");?>
         "SEF_URL_TEMPLATES" => Array(
             "detail" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
             "news" => "",
-            "section" => "#SECTION_CODE_PATH#/"
+            "section" => "#SECTION_CODE_PATH#/",
+            "search" => "/professions/",
         ),
         "SET_LAST_MODIFIED" => "N",
         "SET_STATUS_404" => "N",
@@ -77,7 +78,7 @@ $APPLICATION->SetTitle("Каталог профессий");?>
         "USE_RATING" => "N",
         "USE_REVIEW" => "N",
         "USE_RSS" => "N",
-        "USE_SEARCH" => "N",
+        "USE_SEARCH" => "Y",
         "USE_SHARE" => "N",
         'FILTER_NAME' => 'arrFilter'
     )

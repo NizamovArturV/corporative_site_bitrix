@@ -99,6 +99,96 @@
       &-programs {
          margin-top: rem(24px);
       }
+
+      &-search-title {
+         font-size: rem(16px);
+         line-height: rem(20px);
+         font-weight: 600;
+
+         @include tablet {
+            display: none;
+         }
+      }
+
+      &-search {
+         margin-top: rem(12px);
+         display: flex;
+         align-items: center;
+         height: rem(40px);
+         border: 1px solid rgba(26, 22, 33, 0.2);
+         border-radius: rem(6px);
+         overflow: hidden;
+
+         @include tablet {
+            margin-top: 0;
+         }
+
+         @include mobile {
+            height: rem(36px);
+         }
+
+         label {
+            position: absolute;
+            display: none; 
+            top: 50%;
+            left: rem(16px);
+            transform: translateY(-50%);
+
+            @include tablet {
+               display: block;
+            }
+         }
+
+         input {
+            height: 100%;
+            width: 100%;
+            padding-left: rem(10px);
+            font-size: rem(14px);
+            line-height: rem(20px);
+
+            @include tablet {
+               padding-left: rem(36px);
+            }
+
+            @include mobile {
+               font-size: rem(13px);
+               line-height: rem(16px);
+            }
+         }
+
+         &-btn {
+            height: rem(40px);
+            width: rem(64px);
+            background-color: rgba(91, 23, 208, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: rem(6px);
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            position: absolute;
+            right: 0;
+            border-width: 0;
+
+            &:hover {
+               background-color: #905EE7;
+               transition: 0.2s ease-in-out;
+            }
+
+            @include tablet {
+               display: none;
+            }
+         }
+
+         &-wrapper {
+            margin-bottom: rem(24px);
+            position: relative;
+
+            @include mobile {
+               margin-bottom: rem(18px);
+            }
+         }
+      }
    }
 }
 
