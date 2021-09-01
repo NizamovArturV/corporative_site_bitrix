@@ -27,9 +27,6 @@ use \Wptt\Main as Main;
                 <div class="first-block__title">
                     <?=$arResult['NAME']?>
                 </div>
-                <div class="first-block__title">
-                    Javascript-разработчик
-                </div>
                 <div class="first-block__subtitle">
                     <?=$arResult['PROPERTIES']['SCHOOL']['ITEM']['NAME']?>
                 </div>
