@@ -23,9 +23,8 @@ $this->setFrameMode(true);
             <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="article">
                 <div class="article__image" style="background-image: url('<?=$arItem['PREVIEW_PICTURE']['SRC']?>');">
                 </div>
-                <div class="article__date"><?=FormatDateFromDB($arItem['DATE_ACTIVE_FROM'], 'DD MMMM YYYY')?></div>
+                <div class="article__date"><?/* FormatDateFromDB($arItem['DATE_ACTIVE_FROM'], 'DD MMMM YYYY') */?></div>
                 <div class="article__description">
-                    <?/*=mb_strimwidth($arItem['PREVIEW_TEXT'], 0, 195, "...");*/?>
                     <?=$arItem['NAME']?>
                 </div>
             </a>
