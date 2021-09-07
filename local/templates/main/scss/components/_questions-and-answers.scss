@@ -1,0 +1,123 @@
+.questions-and-answers {
+   padding: rem(179px) 0 rem(97px);
+   background: rgba(244, 243, 245, 1);
+
+   @include tablet_small {
+      padding: rem(113px) 0 rem(64px);
+   }
+
+   @include mobile {
+      padding: rem(80px) 0 rem(64px);
+   }
+
+   &__title {
+      font-size: rem(44px);
+      line-height: rem(56px);
+      font-weight: bold;
+      max-width: 60%;
+
+      @include desktop_small {
+         max-width: 100%;
+      }
+
+      @include tablet_small {
+         font-size: rem(34px);
+         line-height: rem(46px);
+      }
+
+      @include mobile {
+         font-size: rem(24px);
+         line-height: rem(32px);
+      }
+   }
+
+   &__body {
+      margin-top: rem(32px);
+      padding: rem(36px) rem(32px) rem(32px);
+      background: #ffffff;
+      box-shadow: 0px 2px 6px rgba(66, 63, 63, 0.04), 0px 0px 1px rgba(66, 63, 63, 0.04);
+      border-radius: 16px;
+      max-width: rem(876px);
+      width: 100%;
+
+      @include mobile {
+         padding: rem(20px) rem(16px);
+      }
+   }
+
+   &__row {
+      padding: rem(24px) 0;
+      border-bottom: 1px solid rgba(190, 190, 190, 1);
+
+      @include mobile {
+         padding: rem(12px) 0 rem(16px);
+      }
+
+      &:first-child {
+         padding-top: 0;
+      }
+
+      &.active {
+         .questions-and-answers__hidden-text {
+            margin-top: rem(24px);
+            height: 100%;
+            opacity: 1;
+            transition: 0.2s ease-in-out;
+
+            @include mobile {
+               margin-top: rem(14px);
+            }
+         }
+
+         .questions-and-answers__headline-circle {
+            transform: rotate(45deg);
+            transition: 0.2s ease-in-out;
+         }
+      }
+   }
+
+   &__headline {
+      position: relative;
+      cursor: pointer;
+
+      p {
+         font-size: rem(22px);
+         line-height: rem(28px);
+         font-weight: bold;
+
+         @include mobile {
+            font-size: rem(16px);
+            line-height: rem(20px);
+         }
+      }
+
+      &-circle {
+         position: absolute;
+         top: 0;
+         right: 0;
+         line-height: 0;
+         transition: 0.2s ease-in-out;
+
+         @include mobile {
+            svg {
+               width: rem(24px);
+               height: rem(24px);
+            }
+         }
+      }
+   }
+
+   &__hidden-text {
+      font-size: rem(18px);
+      line-height: rem(28px);
+      max-width: rem(778px);
+      height: 0;
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+
+      @include mobile {
+         font-size: rem(14px);
+         line-height: rem(20px);
+      }
+   }
+}

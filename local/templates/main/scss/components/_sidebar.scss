@@ -27,7 +27,7 @@
 
          @include tablet_small {
             flex-direction: row;
-            
+
             p:last-child {
                margin-left: rem(5px);
             }
@@ -39,6 +39,14 @@
       padding: rem(20px) 0;
       display: block;
       border-bottom: 1px solid rgba(26, 22, 33, 0.12);
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+         .sidebar__subtitle {
+            color: rgba(91, 23, 208, 1);
+            transition: 0.2s ease-in-out;
+         }
+      }
 
       &:first-child {
          padding-top: 0;

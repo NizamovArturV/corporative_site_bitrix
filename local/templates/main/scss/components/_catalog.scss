@@ -30,8 +30,10 @@
 
    &-filter {
       &-body {
+         position: relative;
          max-width: rem(276px);
          width: 100%;
+         height: fit-content;
 
          @include desktop_small {
             max-width: rem(240px);

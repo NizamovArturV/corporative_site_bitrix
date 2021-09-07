@@ -294,13 +294,10 @@
       transition: 0.3s ease-in-out;
       font-size: rem(6px);
 
-      // display: flex;
       align-items: center;
       justify-content: center;
       padding-left: rem(15px);
-
       
-    
       background-image: url('data:image/svg+xml;charset=utf8,%3Csvg width="124" height="47" viewBox="0 0 124 47" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M19.9042 1.93095C21.0401 0.700075 22.6387 0 24.3136 0H118C121.314 0 124 2.68629 124 6V41C124 44.3137 121.314 47 118 47H24.3136C22.6387 47 21.0401 46.2999 19.9042 45.0691L3.75498 27.5691C1.63418 25.2709 1.63417 21.7291 3.75497 19.4309L19.9042 1.93095Z" fill="%235B17D0"/%3E%3C/svg%3E');
       background-repeat: no-repeat;
 
@@ -310,14 +307,14 @@
 
       }
       &.active {
-         // display: flex;
          z-index: 50;
          width: rem(124px);
          height: rem(47px);
          right: rem(-95px);
          transition: 0.3s ease-in-out;
 
-         font-size: rem(16px);
+         font-size: rem(13px);
+         white-space: nowrap;
       }
    }
 }

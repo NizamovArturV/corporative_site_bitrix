@@ -1,0 +1,29 @@
+.university {
+   // background-color: pink;
+   .news__title {
+      margin-top: 0;
+   }
+
+   &-programs {
+      margin-top: rem(38px);
+      color: rgba(91, 23, 208, 1);
+      font-size: rem(16px);
+      line-height: rem(22px);
+      font-weight: 500;
+
+      @include tablet_small {
+         margin-top: rem(16px);
+      }
+   }
+
+   .news__row:first-child {
+      padding-top: 0;
+      border-top: none;
+   }
+
+   p strong {
+      @include tablet_small {
+         display: block;
+      }
+   }
+}

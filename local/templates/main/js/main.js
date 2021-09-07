@@ -183,122 +183,79 @@ if ((filterWrap1) || (filterWrap2)) {
         }
     })
 
-    if ($('#filterWrap1').not('.active')) {
-        console.log('321');
-    }
-
-    let timeout1;
-    let counter1 = 0;
-    document.querySelectorAll('.js-filterWrap1 input').forEach(input => {
+    let counter = 0,
+        timeout;
+    document.querySelectorAll('.catalog-filter-body input[type=checkbox]').forEach(input => {
         input.addEventListener('click', function () {
 
-            $('#filterWrap1 .filter-selector__btn-show').removeClass('active')
+            let selectorBtn = document.querySelector('.catalog-filter-body .filter-selector__btn-show'),
+                selectorBody = document.querySelector('.catalog-filter-body'),
+                selectorBtnRemove = document.querySelectorAll('.catalog-filter-body .filter-selector__buttons-remove');
 
-            if ($(this).is(':checked')) {
-                counter1++;
-
-                if (counter1 > 0) {
-                    $('#filterWrap1 .filter-selector__buttons-remove').addClass('active')
-                }
-                $('#filterWrap1 .filter-selector__btn-show').addClass('active')
+            //Проверяем количество отмеченных чекбоксов, если ни один не отмечен, то у кнопки убираем активный класс
+            if (this.checked) {
+                counter++
             } else {
-                counter1--;
-
-                if (counter1 < 1) {
-                    $('#filterWrap1 .filter-selector__buttons-remove').removeClass('active')
-                }
+                counter--
             }
 
-            clearTimeout(timeout1)
-            timeout1 = setTimeout(() => {
-                $('#filterWrap1 .filter-selector__btn-show').removeClass('active')
-            }, 4000)
-        })
-    })
-
-    let timeout2;
-    let counter2 = 0;
-    document.querySelectorAll('.js-filterWrap2 input').forEach(input => {
-        input.addEventListener('click', function () {
-            $('#filterWrap2 .filter-selector__btn-show').removeClass('active')
-
-            if ($(this).is(':checked')) {
-                counter2++;
-
-                if (counter2 > 0) {
-                    $('#filterWrap2 .filter-selector__buttons-remove').addClass('active')
-                }
-                $('#filterWrap2 .filter-selector__btn-show').addClass('active')
+            if (counter < 1) {
+                selectorBtn.classList.remove('active')
+                selectorBtnRemove.forEach(item => {
+                    item.classList.remove('active')
+                })
             } else {
-                counter2--;
-
-                if (counter2 < 1) {
-                    $('#filterWrap2 .filter-selector__buttons-remove').removeClass('active')
-                }
+                selectorBtn.classList.add('active')
+                selectorBtnRemove.forEach(item => {
+                    item.classList.add('active')
+                })
             }
 
-            clearTimeout(timeout2)
-            timeout2 = setTimeout(() => {
-                $('#filterWrap2 .filter-selector__btn-show').removeClass('active')
-            }, 4000)
-        })
-    })
-
-    /* ОТСЛЕДИТЬ СОСТОЯИНИЕ (КЛАСС) У #filterWrap2 .filter-selector__btn-show И ДОБАВИТЬ SETTIMEOUT ЕСЛИ ЕСТЬ АКТИВНЫЙ КЛАСС */
-
-    document.querySelectorAll('#filterWrap1 .filter-checkbox__wrap').forEach(input => {
-        input.addEventListener('click', function () {
             var obj = this // берем интересующий элемент
-            var height = obj.offsetHeight / 2;
-            var posY = obj.offsetTop;  // верхний отступ эл-та от родителя
-            // var posX = obj.offsetLeft; // левый отступ эл-та от родителя
-            // var posAbs = posY + height;
-            // var scroll = obj.scrollTop;
+            var height = obj.parentElement.offsetHeight / 2; //получаем его высоту и делим на 2, чтобы правильно спозиционировать кнопку
 
-            var parentPos = document.querySelector('.js-hidden1').getBoundingClientRect().top,
-            childPos = obj.getBoundingClientRect().top;
+            var parentPos = selectorBody.getBoundingClientRect().top, //получаем расстояние от верхней точки экрана до главной обертки фильтров
+                childPos = obj.parentElement.getBoundingClientRect().top; //получаем расстояние от верхний точки экрана до отмеченного чекбокса по клику
 
-            relativePosTop = childPos - parentPos + height + 25;
+            relativePosTop = childPos - parentPos + height - 25; //высчитываем разницу этих параметров, чтобы задать высоту позиционирования кнопки
 
-          
-   
             var attribute = 'top: ' + relativePosTop + 'px;';
-            document.querySelector('#filterWrap1 .filter-selector__btn-show').setAttribute('style', attribute)
-            // console.log(height);
-            // console.log(posY);
-            // console.log(posAbs);
-            // console.log(scroll);
-         
+            selectorBtn.setAttribute('style', attribute)
+
+            clearTimeout(timeout)
+            timeout = setTimeout(() => {
+                selectorBtn.classList.remove('active')
+            }, 5000)
+
+            //Запрос на колличество элементов
+            const request = new XMLHttpRequest();
+           request.responseType =    "json";
+           const url = '/api/countElements.php?' + Array.from(
+               new FormData(input.closest('form')),
+               e => e.map(encodeURIComponent).join('=')
+           ).join('&')
+
+           request.open('GET', url);
+
+
+           request.setRequestHeader('Content-Type', 'application/x-www-form-url');
+
+
+           request.addEventListener("readystatechange", () => {
+
+
+               if (request.readyState === 4 && request.status === 200) {
+
+                   let response = request.response;
+                   selectorBtn.textContent = selectorBtn.dataset.title + ' (' + response + ')';
+               }
+           });
+
+           request.send();
         })
     })
 
-   
-
-    // console.log(parentPos);
-
-    document.querySelectorAll('#filterWrap2 .filter-checkbox__wrap').forEach(input => {
-        input.addEventListener('click', function () {
-            var obj = this // берем интересующий элемент
-            var height = obj.offsetHeight/2;
-            var posY = obj.offsetTop;  // верхний отступ эл-та от родителя
-            // var posX = obj.offsetLeft; // левый отступ эл-та от родителя
-            // var posAbs = posY + height - 28;
-            var scroll = obj.getBoundingClientRect().top;
-
-            var parentPos = document.querySelector('.js-hidden2').getBoundingClientRect().top,
-            childPos = obj.getBoundingClientRect().top;
-
-            relativePosTop = childPos - parentPos + height + 25;
-
-       
-            var element = obj.offsetParent;
-            var attribute = 'top: ' + relativePosTop + 'px;';
-            document.querySelector('#filterWrap2 .filter-selector__btn-show').setAttribute('style', attribute)
-        })
-    })
-
-    p = $('.filter-selector__hidden').scrollTop;
-    console.log(p);
+    // p = $('.filter-selector__hidden').scrollTop;
 
 
     $(document).on('click', (e) => {
@@ -429,7 +386,54 @@ $(document).on('click', '.question-form__layout-wrapper', (e) => {
     }
 })
 
+$('.questions-and-answers__row').on('click', '.questions-and-answers__headline', function () {
+    if ($(this).parent().hasClass('active')) {
+        $(this).parent().removeClass('active')
+    } else {
+        $(this).parent().addClass('active')
+    }
+})
 
+// document.querySelector('.header__menu .js-menu-about').addEventListener('mouseover', function () {
+//     if (this.parentElement.classList.contains('active')) {
+//         this.parentElement.classList.remove('active')
+//     } else {
+//         this.parentElement.classList.add('active')
+//     }
+// })
+
+document.addEventListener('mouseover', function (e) {
+        if ((e.target.closest('.js-menu-inner')) && !e.target.closest('.js-menu-inner').classList.contains('active') || e.target.closest('.header__menu-item-hidden-text') || e.target.classList.contains('js-menu-about')) {
+            e.target.closest('.js-menu-inner').classList.add('active')
+            
+        } else {
+            document.querySelector('.js-menu-inner').classList.remove('active')
+            // e.target.parentElement.classList.remove('active')
+        }
+    
+})
+// if (this.parentElement.classList.contains('active')) {
+//     this.parentElement.classList.remove('active')
+// } else {
+//     this.parentElement.classList.add('active')
+// }
+
+
+document.addEventListener('click', function (e) {
+    const container = document.querySelector('.header__menu-item-hidden-text'),
+        tab = document.querySelector('.js-menu-about')
+
+    if (!e.target.contains(container) && !e.target.contains(tab)) {
+        container.parentElement.classList.remove('active')
+    }
+
+    // if (container.parentElement.classList.contains('active') && !e.target.contains(container)) {
+    //     container.parentElement.classList.remove('active')
+    // }
+    // if (!e.target.contains(container)) {
+    //     container.parentElement.classList.remove('active')
+    // }
+})
 
 
 
